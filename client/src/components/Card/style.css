@@ -1,0 +1,21 @@
+div small{
+    font-size:14px;
+    margin-left:5px
+}
+
+img{
+    width:20%;
+    margin-right: 30px;
+    height:auto;
+    float: left;
+}
+
+.text_container{
+    width:75%;
+    max-height:250px;
+    overflow: auto;
+}
+
+.cont {
+    margin:auto;
+}

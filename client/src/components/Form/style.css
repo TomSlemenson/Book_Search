@@ -1,0 +1,14 @@
+.width_ {
+  width:80%;
+  border-radius: 5px;
+  border:1px solid grey;
+}
+
+.cont {
+  margin:auto;
+}
+
+.padding{
+  padding:8px;
+  width:10%;
+}
