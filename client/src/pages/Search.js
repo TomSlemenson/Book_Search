@@ -15,6 +15,7 @@ class Search extends Component {
   state = {
     books: [],
     search_term: "",
+    error: ""
   };
 
   handleInputChange = event => {
@@ -28,10 +29,14 @@ class Search extends Component {
     event.preventDefault();
     API.searchBook(this.state.search_term)
       .then(res => {
-        this.setState({ search_term: "" });
-        this.setState({ books: res.data.items })
-      }
-      )
+        if (!res.data.items) {
+          alert("Sorry, book not found...")
+        } else {
+          this.setState({ books: res.data.items });
+          this.setState({ search_term: "" });
+        }
+      })
+      .catch(err => this.setState({ error: err.message }));
   };
 
   handleBookSave = (book) => {
@@ -42,7 +47,7 @@ class Search extends Component {
     }
 
     authors = `${authors.split(":").join(", ")}.`
-   
+
     API.saveBook({
       googleId: book.id,
       title: book.volumeInfo.title,
@@ -70,17 +75,17 @@ class Search extends Component {
             <Form
               handleInputChange={this.handleInputChange}
               handleFormSubmit={this.handleFormSubmit}
-              search_term={this.state.search_term}/>
+              search_term={this.state.search_term} />
             {this.state.books.map(book => (
               <Card
-              key={book.id}
-              title={book.volumeInfo.title}
-              link={book.volumeInfo.infoLink}
-              authors={`${book.volumeInfo.authors}.`}
-              description={book.volumeInfo.description}
-              image={book.volumeInfo.imageLinks.thumbnail}
-              Button={() => (<button onClick={() => this.handleBookSave(book)}
-                className="btn btn-success ml-2 pr-4 pl-4">Save</button>)} />))}
+                key={book.id}
+                title={book.volumeInfo.title}
+                link={book.volumeInfo.infoLink}
+                authors={`${book.volumeInfo.authors}.`}
+                description={book.volumeInfo.description}
+                image={book.volumeInfo.imageLinks.thumbnail}
+                Button={() => (<button onClick={() => this.handleBookSave(book)}
+                  className="btn btn-success ml-2 pr-4 pl-4">Save</button>)} />))}
           </Col>
         </Row>
       </Container>
