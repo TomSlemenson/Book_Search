@@ -19,8 +19,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 // Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
-mongoose.connect("mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+// mongoose.connect("mongodb://localhost/reactreadinglist");
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://user:Plus-445@ds347367.mlab.com:47367/heroku_dvhrdsgv");
 
 // Start the API server
