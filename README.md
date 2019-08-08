@@ -14,7 +14,7 @@ Go to [NYT GOOGLE BOOK SEARCH](https://booksearchhw.herokuapp.com/)
 
 ![Home_Gif](README_GIFS/Notfound.gif)
 
-3. INCORECT URL.
+3. INCORRECT URL.
 
 ![Add_Edit_Gif](README_GIFS/Error.gif)
 
