@@ -7,20 +7,12 @@ const bookSchema = new Schema({
     required: true,
     unique: true
   },
-  title: {
-    type: String,
-    required: true,
-  },
- 
+  
+  title: String,
   authors: String,
   description:String,
   image: String,
-  
-  link: {
-    type: String,
-    required: true,
-    unique: true
-  },
+  link: String,
   date: { type: Date, default: Date.now }
 });
 
