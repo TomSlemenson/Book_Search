@@ -4,23 +4,22 @@
 
 ## See the app in action!
 
-
 1. SEARCH, SAVE and DELETE
 
-![Add_Edit_Gif](README_GIFs/Screen Recording 2019-08-07 at 7.13.29 PM.gif)
+![Add_Edit_Gif](README_GIFS/SSD.gif)
 
 2. BOOK NOT FOUND.
 
-![Home_Gif](README_GIFs/Notfound.gif)
+![Home_Gif](README_GIFS/Notfound.gif)
 
 3. INCORECT URL.
 
-![Add_Edit_Gif](README_GIFs/Error.gif)
+![Add_Edit_Gif](README_GIFS/Error.gif)
 
 
 4. BUY BOOK.
 
-![Login_Gif](README_GIFs/Buy.gif)
+![Login_Gif](README_GIFS/Buy.gif)
 
 
 ## Built With
