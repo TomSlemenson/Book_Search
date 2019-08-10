@@ -20,7 +20,7 @@ app.get("*", (req, res) => {
 });
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/booksearch");
-// mongoose.connect("mongodb://localhost/reactreadinglist");
+// mongoose.connect("mongodb://localhost/booksearch");
 
 
 
